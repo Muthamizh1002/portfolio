@@ -1,0 +1,1 @@
+export default function Header(){return (<header><h1>Muthamizh S</h1><p>Senior .NET Developer</p></header>);}
