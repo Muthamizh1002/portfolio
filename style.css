@@ -1,0 +1,179 @@
+
+*{margin:0;padding:0;box-sizing:border-box}
+
+body{
+font-family:Poppins;
+background:#ffffff;
+color:#111;
+transition:.3s;
+}
+
+.dark{
+background:#0f172a;
+color:white;
+}
+
+#progress{
+position:fixed;
+top:0;
+left:0;
+height:4px;
+background:#7c3aed;
+width:0%;
+z-index:999;
+}
+
+.hero{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+background:linear-gradient(-45deg,#1e3a8a,#7c3aed,#0ea5e9,#9333ea);
+background-size:400% 400%;
+animation:gradient 12s ease infinite;
+color:white;
+padding:20px;
+}
+
+@keyframes gradient{
+0%{background-position:0% 50%}
+50%{background-position:100% 50%}
+100%{background-position:0% 50%}
+}
+
+.navbar{
+position:absolute;
+top:0;
+width:100%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 8%;
+}
+
+.navbar ul{
+display:flex;
+gap:25px;
+list-style:none;
+}
+
+.navbar a{
+color:white;
+text-decoration:none;
+}
+
+.menu-toggle{
+display:none;
+font-size:26px;
+cursor:pointer;
+}
+
+.hero-text h1{
+font-size:42px;
+}
+
+.btn{
+display:inline-block;
+margin-top:20px;
+padding:12px 26px;
+background:#7c3aed;
+border-radius:30px;
+color:white;
+text-decoration:none;
+}
+
+section{
+padding:80px 10%;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:20px;
+}
+
+.card{
+background:#f1f5f9;
+padding:20px;
+border-radius:12px;
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-6px);
+}
+
+.dark .card{
+background:#1e293b;
+}
+
+.timeline{
+display:grid;
+gap:40px;
+}
+
+.contact-links{
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+margin-top:20px;
+}
+
+.contact-links a{
+padding:12px 20px;
+background:#7c3aed;
+color:white;
+border-radius:8px;
+text-decoration:none;
+}
+
+footer{
+text-align:center;
+padding:20px;
+background:#020617;
+color:#9ca3af;
+}
+
+.reveal{
+opacity:0;
+transform:translateY(40px);
+transition:1s;
+}
+
+.reveal.active{
+opacity:1;
+transform:translateY(0);
+}
+
+@media(max-width:768px){
+
+.navbar ul{
+position:absolute;
+top:60px;
+right:0;
+background:#1e3a8a;
+flex-direction:column;
+width:200px;
+display:none;
+padding:20px;
+}
+
+.navbar ul.show{
+display:flex;
+}
+
+.menu-toggle{
+display:block;
+}
+
+.hero-text h1{
+font-size:28px;
+}
+
+section{
+padding:60px 20px;
+}
+
+}
